@@ -1,22 +1,28 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <div>
-      <div className="menu menu-horizontal">
+    <nav className="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
+      <h1 className="text-xl font-bold">Product</h1>
+      <ul className="flex gap-6">
         <li>
-          <NavLink to="/">Home</NavLink>
+          <Link to="/" className="hover:text-orange-400">
+            Home
+          </Link>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <Link to="/about" className="hover:text-orange-400">
+            About
+          </Link>
         </li>
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <Link to="/contact" className="hover:text-orange-400">
+            Contact
+          </Link>
         </li>
-      </div>
-    </div>
+      </ul>
+    </nav>
   );
-}
+};
 
 export default Navbar;
